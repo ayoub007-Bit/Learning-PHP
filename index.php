@@ -200,10 +200,122 @@ echo $nom ?? "veuillez entrer votre nom";
 echo "<br>";
 $nom = "Ayoub";
 echo $nom ?? "veuillez entrer votre nom";
+echo "<br>";
+
+
+//8-les fonctions = des blocs de code réutilisables 
+// il faut la declarer , definir et appeler
+function createTitle()
+{
+    $title = "titre de la page";
+    echo "<h1> {$title}</h1>";
+}
+createTitle();
+createTitle();
+createTitle();
+//fonction avec parametre
+function createTitle2($titre)
+{
+    echo "<h3> {$titre}</h3>";
+}
+createTitle2("Types");
+createTitle2("Variables");
+createTitle2("Opérateurs");
+createTitle2("Fonctions");
+function comparaison($x, $y)
+{
+    $max = max($x, $y);
+    echo "le plus grand entre {$x} et {$y} est : {$max} <br>";
+}
+comparaison(2, 5);
+function comparaisonFond($w, $z)
+{
+    $plusGrandOuPetit = ($w > $z) ? "{$w} est plus grand que {$z} <br>" : "{$w} est plus petit que {$z}<br>";
+    echo $plusGrandOuPetit;
+}
+comparaisonFond(22, 10);
+comparaisonFond("7", 8);
+//fonction avec retour
+
+function retour($name): string
+{
+    return "<h1>bonjour {$name} </h1>";
+}
+echo retour("ayoub");
+//9-global et local et static scope 
+
+function localscope()
+{
+    $hey = "hey <br>";
+    echo $hey;
+}
+localscope();
+//echo $hey; //erreur car la variable est locale
+
+//locale scope = dans notre fonction
+//globale scope = dans et en dehors la fonction
+//static scope = conserve la valeur de la variable
+function globalScope()
+{
+    global $namecheap;
+    echo "this is a domain name : {$namecheap} <br>";
+}
+$namecheap = "ayoub.com";
+globalScope();
+function staticScope()
+{
+    static $chapterNumber = 1;
+    echo "chapter number : {$chapterNumber} <br>";
+    $chapterNumber++;
+}
+staticScope();
+staticScope();
+staticScope();
+
+
+//10-Boucles : for, while, do while et foreach
+//for
+for ($i = 0; $i < 5; $i++) {
+    echo "Page : {$i} <br>";
+}
+
+$arrayForLoop = ["charlotte", "ayoub", "Ahmed"];
+
+for ($i = 0; $i < count($arrayForLoop); $i++) {
+    echo "Student : {$arrayForLoop[$i]} <br>";
+}
+//Foreach
+$arrayForEach = ["Toulouse" => 10, "Paris" => 3, "Marrakech" => 46];
+
+foreach ($arrayForEach as $key => $value) {
+    echo "ville : {$key}, Température : {$value} °C <br>";
+}
+//while 
+$i = 0;
+while ($i < 7) {
+    echo "page : {$i} <br>";
+    $i++;
+}
+//Break et continue
+for ($i = 0; $i < 20; $i++) {
+    if ($i % 2 == 0) {
+        continue;
+    } else if ($i == 13) {
+        break;
+    }
+    echo "{$i} <br>";
+}
 
 
 
-//8-les fonctions 
+//11-Conditions if and else
+$isSunny = true;
+$isWinter = true;
+if ($isSunny) {
+    echo "vamos a la playa <br>";
+}else if($isWinter){
+    echo "vamos a la montaña <br>";
+}
 
 
 
