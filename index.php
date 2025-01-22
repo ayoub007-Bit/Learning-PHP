@@ -316,7 +316,31 @@ if ($isSunny) {
 }else if($isWinter){
     echo "vamos a la montaña <br>";
 }
-
-
-
+$season=  "summer";
+switch($season){
+    case "summer" : echo "vamos a la playa <br>";
+          break;
+    case "winter" : echo "vamos a la montaña <br>";
+            break;
+    case "autumn" : echo "vamos a walou <br>";
+            break;
+    case "spring" : echo "vamos a la campagne <br>";
+            break;
+}
+//conditions in the code 
 ?>
+<?php
+ $isSunn = true;
+ $season = "summer";
+?>
+
+<?php if($isSunn && $season == "summer") : ?>
+    <h1> vamos a la playa </h1>
+    <?php elseif($isSunn) : ?>
+        <h1> vamos a la playa </h1>
+        <?php else: ?>
+            <h1> fakyoooooooo </h1>
+            <?php endif ; ?>
+ 
+
+

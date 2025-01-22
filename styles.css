@@ -1,0 +1,31 @@
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+header{
+    background-color: #333;
+    color: white;
+    width: 100%;
+    height: 15vh;
+    
+}
+
+footer{
+    width: 100%;
+   height: 10vh;
+    background-color: #333;
+    color: white;
+    text-align: center;
+
+}
+
+.container{
+    width: 80%;
+    height: 75vh;
+    margin-top: 25px;
+    background-color: aquamarine;
+}
